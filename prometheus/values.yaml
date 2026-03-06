@@ -1,3 +1,13 @@
 server:
-  service:
-    type: ClusterIP
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+    annotations:
+      traefik.ingress.kubernetes.io/router.entrypoints: websecure
+      traefik.ingress.kubernetes.io/router.tls: "true"
+    hosts:
+      - prometheus.odin.localhost
+    tls:
+      - secretName: odin-tls
+        hosts:
+        - prometheus.odin.localhost
