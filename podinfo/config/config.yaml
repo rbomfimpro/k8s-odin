@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: podinfo
+data:
+  PODINFO_APP_VERSION: "6.10.1"
+  PODINFO_APP_OWNER: "rbomfimpro"
+  PODINFO_APP_SQUAD: "SRE"

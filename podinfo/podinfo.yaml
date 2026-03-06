@@ -17,6 +17,9 @@ spec:
         image: ghcr.io/stefanprodan/podinfo:6.10.1
         ports:
         - containerPort: 9898
+        envFrom:
+        - configMapRef:
+            name: podinfo
 ---
 apiVersion: v1
 kind: Service
