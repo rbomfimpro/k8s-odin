@@ -6,8 +6,8 @@ server:
       traefik.ingress.kubernetes.io/router.entrypoints: websecure
       traefik.ingress.kubernetes.io/router.tls: "true"
     hosts:
-      - prometheus.odin.localhost
+      - prometheus.owl.localhost
     tls:
-      - secretName: odin-tls
+      - secretName: owl-tls
         hosts:
-        - prometheus.odin.localhost
+        - prometheus.owl.localhost
